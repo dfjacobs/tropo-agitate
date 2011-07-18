@@ -82,6 +82,7 @@ class TropoAGItate
         @chanvars = TropoAGItate::MagicChannelVariables.new
       end
       @asterisk_sound_files = asterisk_sound_files if @tropo_agi_config['asterisk']['sounds']['enabled']
+      show "asterisk_sound_files  #{@asterisk_sound_files.inspect}"
     end
 
     ##
