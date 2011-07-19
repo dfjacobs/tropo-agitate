@@ -82,7 +82,6 @@ class TropoAGItate
         @chanvars = TropoAGItate::MagicChannelVariables.new
       end
       @asterisk_sound_files = asterisk_sound_files if @tropo_agi_config['asterisk']['sounds']['enabled']
-      show "asterisk_sound_files  #{@asterisk_sound_files.inspect}"
     end
 
     ##
@@ -763,7 +762,7 @@ class TropoAGItate
       original_string.gsub!('"', '')
       match_data = original_string.match /\d{1,}\#$|\d{1,}$|\d{1,}\*\#$|\d{1,}\#\*$|\d{1,}\*|\#|\*$/
       if match_data.nil?
-        return original_string, nil
+        return original_string.rstrip, nil
       else
         return match_data.pre_match.rstrip, match_data[0]
       end
