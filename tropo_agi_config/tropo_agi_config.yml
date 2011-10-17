@@ -15,7 +15,7 @@ tropo:
     
 agi:
     # This should be your running AGI Server (Adhearsion, PHPAGI, Asterisk-Java, etc)
-    uri: agi://corsair.roaringpine.com:4573/CVDemo
+    uri: agi://corsair.roaringpine.com:4573/CVAutoAttendant
     # Used for local testing
     uri_for_local_tests: agi://corsair.roaringpine.com:4573/CVDemo
 
