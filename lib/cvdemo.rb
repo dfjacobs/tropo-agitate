@@ -205,6 +205,7 @@ class TropoAGItate
       # D() for post-dial DTMF, L() for call duration limits
       #astflags = args.shift if args.count
       options[:callerID] = @chanvars['CALLERID(num)'] if @chanvars.has_key?('CALLERID(num)')
+      options[:answerOnMedia] = true
       options[:headers]  = set_headers(@chanvars)
 
       show "Destination: #{destinations.inspect}, Options: #{options.inspect}"
